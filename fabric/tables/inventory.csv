@@ -1,0 +1,8 @@
+sku,product_name,warehouse,on_hand_cases,open_order_demand_cases,projected_balance_cases,reorder_point_cases,weekly_demand_cases,next_replenishment_date,next_replenishment_cases,unit_price_eur_per_case
+SKU-VP17,Vintage Port 2017,Vila Nova de Gaia,2400,98,2302,600,160,2027-01-15,1200,300
+SKU-TW10,10 Year Old Tawny Port,Vila Nova de Gaia,520,1220,-700,900,260,2026-11-16,1500,140
+SKU-TW20,20 Year Old Tawny Port,Vila Nova de Gaia,1600,450,1150,400,90,2026-12-01,600,260
+SKU-DRT21,Douro Reserva Tinto 2021,Vila Nova de Gaia,4800,290,4510,1200,420,2026-11-02,3000,90
+SKU-RUBY,Fine Ruby Port,Vila Nova de Gaia,5200,751,4449,1500,520,2026-10-28,4000,60
+SKU-WHITE,Extra Dry White Port,Vila Nova de Gaia,2100,312,1788,500,140,2026-11-09,1000,55
+SKU-DBR23,Douro Branco Reserva 2023,Vila Nova de Gaia,1900,550,1350,500,150,2026-11-23,1200,70

@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Engineering AI Agents with Microsoft Foundry · CollabDays Portugal 2026</title>
+<link rel="icon" href="/static/img/cd-logo.png">
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<style>
+  /* Colours and type taken from the session deck */
+  :root {
+    --teal: #10a2c2; --teal-dark: #0b6e85; --teal-light: #e6f5f9; --ink: #404040; --muted: #7f7f7f;
+    --grey: #f2f2f2; --line: #bfbfbf; --line-soft: #e3e3e3; --bg: #ffffff;
+    --comic-red: #e3141e; --comic-yellow: #ffe600;
+    --ok: #1a7f37; --bad: #e3141e;
+    --light: "Segoe UI Light", "Segoe UI", "Helvetica Neue", system-ui, sans-serif;
+    --text: "Segoe UI", "Helvetica Neue", system-ui, sans-serif;
+    --mono: "Cascadia Code", ui-monospace, Menlo, monospace;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 17px/1.5 var(--text); color: var(--ink); background: var(--bg); }
+
+  /* ---------- header: the Porto comic cover */
+  header { position: relative; height: 168px; color: #fff; display: flex; align-items: center; gap: 28px; padding: 0 32px;
+           background: linear-gradient(90deg, rgba(6,16,58,.92) 0%, rgba(6,16,58,.72) 45%, rgba(6,16,58,.25) 100%),
+                       url("/static/img/porto.jpg") center 42% / cover; border-bottom: 4px solid #000; }
+  header .wordmark { height: 118px; filter: drop-shadow(0 3px 0 rgba(0,0,0,.35)); }
+  header .title { flex: 1; min-width: 0; }
+  header h1 { font: 300 32px/1.15 var(--light); margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,.5); }
+  header .by { font-size: 16px; opacity: .9; margin-top: 6px; }
+  header .badges { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+  header .badge { background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 1px 12px; font-size: 13px; }
+  .sticker { background: #fff; color: #000; border: 3px solid #000; box-shadow: 4px 4px 0 #000; padding: 6px 12px; text-align: center;
+             font: 800 14px/1.1 "Arial Black", Impact, var(--text); text-transform: uppercase; transform: rotate(-2deg); }
+  .sticker b { color: var(--comic-red); font-size: 22px; display: block; }
+  .speaker { width: 86px; height: 86px; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 3px 10px rgba(0,0,0,.4); }
+
+  /* ---------- tabs */
+  nav { display: flex; gap: 6px; padding: 0 32px; border-bottom: 1px solid var(--line-soft); background: #fff; position: sticky; top: 0; z-index: 5; }
+  nav button { background: none; border: 0; color: var(--muted); font: 300 18px var(--light); padding: 14px 16px 12px; cursor: pointer; border-bottom: 4px solid transparent; }
+  nav button.active { color: var(--teal); border-bottom-color: var(--teal); }
+  nav button .k { font-weight: 600; }
+
+  main { padding: 22px 32px 80px; max-width: 1560px; margin: 0 auto; }
+  .tab { display: none; } .tab.active { display: block; }
+  .slide-title { font: 300 38px/1.15 var(--light); color: var(--teal); margin: 4px 0 2px; }
+  .slide-sub { color: var(--muted); font-size: 17px; margin-bottom: 18px; }
+  .grid { display: grid; grid-template-columns: 390px 1fr; gap: 24px; align-items: start; }
+
+  .card { background: #fff; border: 1.5px solid var(--line-soft); border-radius: 10px; padding: 16px 18px; margin-bottom: 16px; }
+  .card.source { border-color: var(--teal); background: var(--teal-light); }
+  .card h3 { margin: 0 0 6px; font: 600 19px var(--text); color: var(--teal-dark); display: flex; gap: 8px; align-items: baseline; }
+  .card h3 small { font: 400 15px var(--text); color: var(--muted); }
+  .muted { color: var(--muted); font-size: 14px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .chip { border: 1px solid var(--teal); color: var(--teal-dark); border-radius: 999px; padding: 1px 10px; font: 13px var(--mono); background: #fff; }
+  .entity { background: #fff; border: 1px solid #bfe3ec; border-radius: 8px; padding: 5px 10px; margin: 6px 0; font-size: 14px; }
+  .entity b { color: var(--teal-dark); font-size: 15px; }
+  .tool { font-family: var(--mono); font-size: 14px; }
+
+  button.primary { background: var(--teal); color: #fff; border: 0; border-radius: 8px; padding: 11px 18px; font: 600 16px var(--text); cursor: pointer; }
+  button.primary:hover { background: var(--teal-dark); }
+  button.primary:disabled { opacity: .45; cursor: default; }
+  button.ghost { background: #fff; border: 1.5px solid var(--line-soft); color: var(--ink); border-radius: 8px; padding: 8px 12px; font-size: 15px; cursor: pointer; }
+  button.ghost:hover { border-color: var(--teal); color: var(--teal-dark); }
+  .ask { display: flex; gap: 8px; margin-top: 12px; }
+  .ask input { flex: 1; font: 17px var(--text); padding: 11px 13px; border: 1.5px solid var(--line-soft); border-radius: 8px; color: var(--ink); }
+  .ask input:focus { outline: none; border-color: var(--teal); }
+  .suggestions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+
+  /* ---------- conversation feed */
+  .feed { display: flex; flex-direction: column; gap: 10px; min-height: 140px; }
+  .you { align-self: flex-end; background: var(--teal-dark); color: #fff; padding: 10px 15px; border-radius: 14px 14px 2px 14px; max-width: 75%; }
+  .toolcall { font-size: 15px; padding: 6px 12px; border-radius: 8px; background: var(--grey); display: flex; gap: 8px; align-items: baseline; animation: pop .25s ease; }
+  .toolcall b, .toolcall .src { white-space: nowrap; }
+  .toolcall .src { font-weight: 700; color: var(--teal-dark); }
+  .toolcall .args { color: var(--muted); font: 13px var(--mono); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .msg { background: #fff; border: 1.5px solid var(--line-soft); border-left: 5px solid var(--teal); border-radius: 10px; padding: 10px 16px; animation: pop .25s ease; }
+  .msg .who { font-weight: 700; font-size: 15px; color: var(--teal-dark); margin-bottom: 2px; }
+  .msg h1, .msg h2 { font: 300 22px var(--light); color: var(--teal); margin: 12px 0 4px; }
+  .msg h3 { font-size: 17px; margin: 10px 0 4px; color: var(--teal-dark); }
+  .msg p { margin: 6px 0; } .msg ul, .msg ol { margin: 4px 0; padding-left: 22px; } .msg strong { color: #222; }
+  .msg.orchestrator { border-left-color: var(--teal-dark); background: var(--teal-light); }
+  .msg.action { border-left-color: var(--comic-yellow); }
+  .msg.error { border-left-color: var(--bad); background: #fff5f5; }
+  .msg.error .who { color: var(--bad); }
+  .thinking { color: var(--muted); font-style: italic; }
+  .thinking::after { content: "…"; animation: dots 1.2s infinite; }
+
+  .approval { border: 3px solid #000; box-shadow: 6px 6px 0 var(--comic-yellow), 6px 6px 0 2px #000; background: #fff; border-radius: 4px; padding: 14px 18px; animation: pop .25s ease; margin: 4px 8px 8px 0; }
+  .approval h4 { margin: 0 0 8px; font-size: 17px; }
+  .approval h4 .stop { background: var(--comic-red); color: #fff; padding: 1px 8px; margin-right: 6px; font: 800 14px "Arial Black", Impact, var(--text); text-transform: uppercase; }
+  .approval table { border-collapse: collapse; width: 100%; font-size: 15px; }
+  .approval td { padding: 5px 8px; vertical-align: top; border-top: 1px solid var(--line-soft); }
+  .approval td:first-child { font-weight: 600; width: 110px; color: var(--teal-dark); }
+  .approval .body { white-space: pre-wrap; }
+  .approval .buttons { display: flex; gap: 10px; margin-top: 12px; }
+  .approve { background: var(--ok); color: #fff; border: 0; border-radius: 6px; padding: 10px 24px; font: 700 16px var(--text); cursor: pointer; }
+  .reject { background: #fff; color: var(--bad); border: 2px solid var(--bad); border-radius: 6px; padding: 8px 22px; font: 700 16px var(--text); cursor: pointer; }
+  .decided { font-weight: 700; margin-top: 8px; } .decided.ok { color: var(--ok); } .decided.no { color: var(--bad); }
+  .sent { background: #effaf2; border: 1px solid #b6e3c3; border-radius: 10px; padding: 8px 14px; font-size: 15px; }
+
+  /* ---------- Demo 2: the architecture slide, live */
+  .arch { display: grid; grid-template-columns: 170px 46px 210px 46px 230px 46px 210px; grid-template-rows: repeat(3, auto);
+          gap: 12px 0; align-items: center; justify-content: center; margin: 6px 0 4px; }
+  .box { border: 2px solid var(--teal); background: #fff; border-radius: 8px; padding: 10px 12px; text-align: center; transition: all .3s; position: relative; }
+  .box .n { font-weight: 700; color: #222; } .box .m { font-size: 13px; color: var(--muted); }
+  .box.person { grid-row: 1 / 4; background: var(--grey); border-color: var(--line); }
+  .box.orch { grid-row: 1 / 4; background: var(--teal); border-color: var(--teal); }
+  .box.orch .n, .box.orch .m { color: #fff; }
+  .box.src { background: var(--teal-light); border-color: transparent; }
+  .box.src .n { color: var(--teal-dark); }
+  .box.brief { background: var(--grey); border-color: transparent; }
+  .link { text-align: center; color: var(--teal); font-size: 22px; }
+  .link.span { grid-row: 1 / 4; }
+  .box.working { box-shadow: 0 0 0 5px rgba(16,162,194,.25); animation: pulse 1.2s infinite; }
+  .box.waiting { border-color: var(--comic-red); box-shadow: 0 0 0 5px rgba(227,20,30,.18); }
+  .box.waiting::after { content: "WAITING FOR YOU"; position: absolute; top: -12px; right: -10px; background: var(--comic-red); color: #fff;
+                        font: 800 11px "Arial Black", Impact, var(--text); padding: 2px 6px; transform: rotate(3deg); }
+  .box.done { border-color: var(--ok); }
+  .box.orch.done { background: var(--teal-dark); border-color: var(--teal-dark); }
+  .box.src.hit { animation: hit .8s ease; }
+  .arch-foot { text-align: center; color: var(--muted); font-size: 14px; margin-top: 10px; }
+  .arch-foot .human { color: var(--teal-dark); font-style: italic; font-weight: 600; }
+
+  /* ---------- Demo 3 */
+  pre.console { background: #0f1720; color: #e8eef2; border-radius: 10px; padding: 14px; font: 13px/1.35 var(--mono); overflow-x: auto; min-height: 260px; white-space: pre; margin: 0; }
+  pre.console a { color: #7fd6ea; }
+  .links a { display: block; margin: 8px 0; color: var(--teal-dark); font-weight: 700; }
+  .trace { font-size: 13px; color: var(--muted); }
+
+  .modal { position: fixed; inset: 0; background: rgba(0,0,0,.55); display: none; align-items: center; justify-content: center; z-index: 9; }
+  .modal.open { display: flex; }
+  .modal pre { background: #0f1720; color: #e8eef2; padding: 22px; border-radius: 12px; font: 16px/1.45 var(--mono); max-width: 95vw; max-height: 85vh; overflow: auto; }
+  .cd { position: fixed; right: 22px; bottom: 16px; height: 46px; opacity: .95; }
+
+  @keyframes pop { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+  @keyframes pulse { 50% { box-shadow: 0 0 0 10px rgba(16,162,194,.06); } }
+  @keyframes hit { 30% { background: var(--comic-yellow); transform: scale(1.04); } }
+  @keyframes dots { 0% { content: ""; } 33% { content: "."; } 66% { content: ".."; } }
+  @media (max-width: 1200px) { .grid { grid-template-columns: 1fr; } header .sticker { display: none; } }
+  @media (max-width: 900px) { header { height: 120px; gap: 16px; padding: 0 16px; } header .wordmark { height: 78px; }
+    header h1 { font-size: 22px; } header .by, header .speaker { display: none; } nav { padding: 0 8px; } nav button { font-size: 15px; padding: 10px 8px; }
+    main { padding: 16px; } .slide-title { font-size: 28px; } }
+  @media (max-width: 1100px) { .arch { grid-template-columns: 1fr; } .box.person, .box.orch, .link.span { grid-row: auto; } .link { transform: rotate(90deg); } }
+</style>
+</head>
+<body>
+<header>
+  <img class="wordmark" src="/static/img/collabdays.png" alt="CollabDays Portugal · Porto Edition 2026">
+  <div class="title">
+    <h1>Engineering AI Agents with Microsoft Foundry</h1>
+    <div class="by">by Renato Romão · live demos</div>
+    <div class="badges" id="badges"></div>
+  </div>
+  <div class="sticker"><b>#16</b>16 Oct 2026</div>
+  <img class="speaker" src="/static/img/speaker.png" alt="Renato Romão">
+</header>
+<nav>
+  <button class="active" data-tab="d1"><span class="k">Demo 1</span> · Fabric IQ + Work IQ Agent</button>
+  <button data-tab="d2"><span class="k">Demo 2</span> · Multi-Agent + Human Approval</button>
+  <button data-tab="d3"><span class="k">Demo 3</span> · Evals &amp; Tracing in Foundry</button>
+</nav>
+<main>
+  <!-- ================= Demo 1 ================= -->
+  <section class="tab active" id="d1">
+    <div class="slide-title">Fabric IQ + Work IQ Agent</div>
+    <div class="slide-sub">One agent, two sources of truth — “Which key accounts are at risk this week, why — and what should I do?”</div>
+    <div class="grid">
+      <div>
+        <div class="card source">
+          <h3>Fabric IQ <small>the business</small></h3>
+          <div class="muted" id="endpoint"></div>
+          <div id="ontology"><span class="thinking">Loading the ontology</span></div>
+          <div class="chips" id="fabric-tools"></div>
+        </div>
+        <div class="card source">
+          <h3>Work IQ <small>the people</small></h3>
+          <div class="muted">Emails, meetings, Teams messages, people and files — on behalf of the signed-in user.</div>
+          <div class="chips" id="work-tools"></div>
+        </div>
+        <div class="card">
+          <h3>The agent <small>Agent Framework + a Foundry model</small></h3>
+          <div class="muted">Both MCP tools registered on one agent.</div>
+          <div style="margin-top:10px"><button class="ghost" id="show-code">Show the code (~30 lines)</button></div>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="feed" id="feed1"></div>
+          <div class="ask">
+            <input id="q1" placeholder="Ask the agent…" value="Which key accounts are at risk this week and why?">
+            <button class="primary" id="ask1">Ask</button>
+          </div>
+          <div class="suggestions">
+            <button class="ghost" data-q1="Which key accounts are at risk this week and why?">Which key accounts are at risk?</button>
+            <button class="ghost" data-q1="And what about the second account?">And what about the second account?</button>
+            <button class="ghost" data-q1="Is Fourth Coffee & Wine Madrid at risk?">Is a Standard account at risk?</button>
+            <button class="ghost" id="reset1">New conversation</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Demo 2 ================= -->
+  <section class="tab" id="d2">
+    <div class="slide-title">Multi-Agent + Human Approval</div>
+    <div class="slide-sub">Architecture: Account Risk Agent — live.</div>
+    <div class="card">
+      <div class="arch">
+        <div class="box person"><div class="n">Account manager</div><div class="m">asks · approves</div></div>
+        <div class="link span">⇄</div>
+        <div class="box orch" id="n-orchestrator"><div class="n">Orchestrator</div><div class="m">Agent Framework workflow</div><div class="m" data-model="orchestrator"></div></div>
+        <div class="link">➜</div>
+        <div class="box" id="n-data_analyst"><div class="n">Data Analyst agent</div><div class="m" data-model="data_analyst"></div></div>
+        <div class="link">⇄</div>
+        <div class="box src" id="s-fabric"><div class="n">Fabric IQ</div><div class="m">orders · shipments · stock</div></div>
+        <div class="link">➜</div>
+        <div class="box" id="n-work_context"><div class="n">Work Context agent</div><div class="m" data-model="work_context"></div></div>
+        <div class="link">⇄</div>
+        <div class="box src" id="s-work"><div class="n">Work IQ</div><div class="m">emails · meetings · owners</div></div>
+        <div class="link">➜</div>
+        <div class="box" id="n-action"><div class="n">Action agent</div><div class="m" data-model="action"></div></div>
+        <div class="link">➜</div>
+        <div class="box brief" id="s-out"><div class="n">Briefing + plan</div><div class="m">drafted for the QBR</div></div>
+      </div>
+      <div class="arch-foot">Data Analyst and Work Context run <b>concurrently</b>, then hand off to the Action agent · <span class="human">human approval</span> before anything is sent<br>
+        Hosted in Foundry Agent Service · models from the Foundry catalog · traced with OpenTelemetry</div>
+      <div class="ask">
+        <input id="q2" value="Prepare my QBR with Zava Lisboa tomorrow: how big is the risk, why, and what should I do?">
+        <button class="primary" id="run2">Run the workflow</button>
+      </div>
+    </div>
+    <div class="feed" id="feed2"></div>
+    <div class="card" id="followup-card" style="margin-top:16px; display:none">
+      <h3>Memory <small>follow-ups go to the same session — no need to repeat the context</small></h3>
+      <div class="ask">
+        <input id="q2b" value="Make the email shorter and mention the express delivery option.">
+        <button class="primary" id="ask2b">Send</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Demo 3 ================= -->
+  <section class="tab" id="d3">
+    <div class="slide-title">Evals &amp; Tracing in Foundry</div>
+    <div class="slide-sub">Evaluate · Observe · compare models on quality vs cost.</div>
+    <div class="grid">
+      <div>
+        <div class="card">
+          <h3>Evaluate</h3>
+          <div class="muted">Runs the agent on the test set, checks facts and tools locally, scores it in Foundry (groundedness, task adherence, tool-call accuracy, intent resolution) and compares two models for the Data Analyst.</div>
+          <div style="margin-top:12px"><button class="primary" id="run3">Run evaluation (≈2 min)</button></div>
+        </div>
+        <div class="card source links" id="links3"><h3>Foundry portal</h3><div class="muted">Links appear here when the run finishes.</div></div>
+        <div class="card">
+          <h3>Observe <small>OpenTelemetry</small></h3>
+          <div class="muted">Spans such as <span class="tool">data_analyst.search_ontology</span> and <span class="tool">action.send_email</span> sit next to the framework's <span class="tool">invoke_agent</span> and <span class="tool">workflow.run</span>.</div>
+          <div class="trace" id="trace-ids" style="margin-top:8px"></div>
+        </div>
+      </div>
+      <pre class="console" id="console3">Press “Run evaluation”.</pre>
+    </div>
+  </section>
+</main>
+<img class="cd" src="/static/img/cd-logo.png" alt="CollabDays">
+<div class="modal" id="modal"><pre id="code"></pre></div>
+
+<script>
+const AGENTS = {
+  risk_agent: "Account Risk Agent", orchestrator: "Orchestrator", data_analyst: "Data Analyst",
+  work_context: "Work Context", action: "Action agent",
+};
+const SRC_BOX = { "Fabric IQ": "s-fabric", "Work IQ": "s-work", "Outbox": "s-out", "Tasks": "s-out" };
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const md = (s) => (window.marked ? marked.parse(s) : `<p>${esc(s).replace(/\n/g, "<br>")}</p>`);
+let traceIds = [];
+
+// ---------- tabs and header
+document.querySelectorAll("nav button").forEach((b) => b.onclick = () => {
+  document.querySelectorAll("nav button, .tab").forEach((x) => x.classList.remove("active"));
+  b.classList.add("active"); $(b.dataset.tab).classList.add("active");
+});
+fetch("/api/info").then((r) => r.json()).then((info) => {
+  $("badges").innerHTML = [`mode: ${info.mode}`, `model: ${info.models.orchestrator}`, `tracing: ${info.tracing}`]
+    .map((t) => `<span class="badge">${esc(t)}</span>`).join("");
+  document.querySelectorAll("[data-model]").forEach((el) => el.textContent = info.models[el.dataset.model]);
+});
+fetch("/api/sources").then((r) => r.json()).then((s) => {
+  $("endpoint").textContent = s.endpoint;
+  const fab = s.fabric_iq || {}, work = s.work_iq || {};
+  $("ontology").innerHTML = (fab.ontology?.entity_types || []).map((e) =>
+    `<div class="entity"><b>${esc(e.name)}</b> <span class="muted">· ${esc(e.relationships.join(" · "))}</span></div>`).join("")
+    || `<div class="muted">Fabric IQ runs inside Foundry (connection).</div>`;
+  $("fabric-tools").innerHTML = (fab.tools || []).map((t) => `<span class="chip" title="${esc(t.description)}">${esc(t.name)}</span>`).join("");
+  $("work-tools").innerHTML = (work.tools || []).map((t) => `<span class="chip" title="${esc(t.description)}">${esc(t.name)}</span>`).join("");
+});
+$("show-code").onclick = async () => {
+  const c = await (await fetch("/api/code")).json();
+  $("code").textContent = `# ${c.path}\n\n${c.code}`; $("modal").classList.add("open");
+};
+$("modal").onclick = () => $("modal").classList.remove("open");
+
+// ---------- event stream (POST + server-sent events)
+async function stream(url, body, onEvent) {
+  const res = await fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body || {}) });
+  const reader = res.body.getReader(); const dec = new TextDecoder(); let buf = "";
+  while (true) {
+    const { value, done } = await reader.read(); if (done) break;
+    buf += dec.decode(value, { stream: true });
+    let i; while ((i = buf.indexOf("\n\n")) >= 0) {
+      const chunk = buf.slice(0, i); buf = buf.slice(i + 2);
+      if (chunk.startsWith("data: ")) onEvent(JSON.parse(chunk.slice(6)));
+    }
+  }
+}
+
+function add(feed, html, cls) {
+  const el = document.createElement("div"); if (cls) el.className = cls; el.innerHTML = html;
+  feed.appendChild(el); el.scrollIntoView({ behavior: "smooth", block: "end" }); return el;
+}
+
+function render(feed, ev, thinking) {
+  if (ev.type === "tool_call") {
+    add(feed, `🔧 <b>${esc(AGENTS[ev.agent] || ev.agent)}</b> → <span class="src">${esc(ev.source)}</span>
+      <span class="tool">${esc(ev.tool)}</span>${ev.hosted ? ' <span class="muted">(in Foundry)</span>' : ""} <span class="args">${esc(ev.args)}</span>`, "toolcall");
+    const box = $(SRC_BOX[ev.source]); if (box) { box.classList.remove("hit"); void box.offsetWidth; box.classList.add("hit"); }
+  } else if (ev.type === "message") {
+    const name = AGENTS[ev.agent] || ev.agent;
+    add(feed, `<div class="who">${esc(ev.title ? `${name} · ${ev.title}` : name)}</div>${md(ev.text)}`, `msg ${ev.agent}`);
+  } else if (ev.type === "approval") {
+    renderApproval(feed, ev);
+  } else if (ev.type === "outbox") {
+    const e = ev.entry;
+    add(feed, e.kind === "email" ? `📤 <b>Sent</b> email to ${esc(e.to)} — “${esc(e.subject)}”` : `✅ <b>Task created</b>: ${esc(e.title)} (${esc(e.owner)}, due ${esc(e.due_date)})`, "sent");
+  } else if (ev.type === "error") {
+    add(feed, `<div class="who">⚠ ${esc(ev.message)}</div><div class="muted">${esc(ev.hint || "")}</div>`, "msg error");
+  } else if (ev.type === "done" && ev.trace_id) {
+    traceIds.unshift(ev.trace_id);
+    $("trace-ids").innerHTML = "Recent trace ids:<br>" + traceIds.slice(0, 5).map((t) => `<span class="tool">${t}</span>`).join("<br>");
+  }
+  if (thinking) feed.appendChild(thinking);
+}
+
+function renderApproval(feed, ev) {
+  const rows = Object.entries(ev.args).map(([k, v]) => `<tr><td>${esc(k)}</td><td class="${k === "body" ? "body" : ""}">${esc(v)}</td></tr>`).join("");
+  const el = add(feed, `<h4><span class="stop">Approval</span>${esc(AGENTS[ev.agent] || ev.agent)} wants to call <span class="tool">${esc(ev.tool)}</span></h4>
+    <table>${rows}</table><div class="buttons"><button class="approve">Approve</button><button class="reject">Reject</button></div>`, "approval");
+  const decide = async (approved) => {
+    el.querySelector(".buttons").outerHTML = `<div class="decided ${approved ? "ok" : "no"}">${approved ? "✔ Approved" : "✘ Rejected — nothing was sent"}</div>`;
+    await fetch("/api/approve", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: ev.id, approved }) });
+  };
+  el.querySelector(".approve").onclick = () => decide(true);
+  el.querySelector(".reject").onclick = () => decide(false);
+}
+
+function thinkingLine(text) { const el = document.createElement("div"); el.className = "thinking"; el.textContent = text; return el; }
+
+// ---------- Demo 1
+async function ask1(text) {
+  if (!text) return;
+  const feed = $("feed1"); $("ask1").disabled = true;
+  add(feed, esc(text), "you");
+  const t = thinkingLine("The agent is checking Fabric IQ and Work IQ"); feed.appendChild(t);
+  try { await stream("/api/demo1/ask", { text }, (ev) => render(feed, ev, t)); } finally { t.remove(); $("ask1").disabled = false; }
+}
+$("ask1").onclick = () => ask1($("q1").value.trim());
+$("q1").onkeydown = (e) => { if (e.key === "Enter") ask1($("q1").value.trim()); };
+document.querySelectorAll("[data-q1]").forEach((b) => b.onclick = () => { $("q1").value = b.dataset.q1; ask1(b.dataset.q1); });
+$("reset1").onclick = async () => { await fetch("/api/demo1/reset", { method: "POST" }); $("feed1").innerHTML = ""; };
+
+// ---------- Demo 2
+function setNode(agent, state) {
+  const el = $(`n-${agent}`); if (!el) return;
+  el.classList.remove("working", "waiting", "done"); if (state) el.classList.add(state);
+}
+async function run2() {
+  const feed = $("feed2"); feed.innerHTML = ""; $("run2").disabled = true;
+  ["orchestrator", "data_analyst", "work_context", "action"].forEach((a) => setNode(a, null));
+  add(feed, esc($("q2").value), "you");
+  const t = thinkingLine("Agents are working"); feed.appendChild(t);
+  try {
+    await stream("/api/demo2/run", { text: $("q2").value }, (ev) => {
+      if (ev.type === "status") setNode(ev.agent, ev.state); else render(feed, ev, t);
+    });
+    $("followup-card").style.display = "block";
+  } finally { t.remove(); $("run2").disabled = false; }
+}
+$("run2").onclick = run2;
+async function ask2b() {
+  const feed = $("feed2"); const text = $("q2b").value.trim(); if (!text) return;
+  $("ask2b").disabled = true; add(feed, esc(text), "you");
+  const t = thinkingLine("The Action agent is working (same session)"); feed.appendChild(t);
+  try { await stream("/api/demo2/followup", { text }, (ev) => { if (ev.type === "status") setNode(ev.agent, ev.state); else render(feed, ev, t); }); }
+  finally { t.remove(); $("ask2b").disabled = false; }
+}
+$("ask2b").onclick = ask2b;
+$("q2b").onkeydown = (e) => { if (e.key === "Enter") ask2b(); };
+
+// ---------- Demo 3
+$("run3").onclick = async () => {
+  const out = $("console3"); out.innerHTML = ""; $("run3").disabled = true;
+  try {
+    await stream("/api/demo3/run", {}, (ev) => {
+      if (ev.type === "line") {
+        out.innerHTML += esc(ev.text).replace(/(https:\/\/\S+)/g, '<a href="$1" target="_blank">$1</a>') + "\n";
+        out.scrollTop = out.scrollHeight;
+      } else if (ev.type === "error") out.innerHTML += `\n⚠ ${esc(ev.message)}\n`;
+    });
+    const found = [...out.textContent.matchAll(/(Agent behaviour|Groundedness) · Foundry portal:\s*(https:\/\/\S+)/g)];
+    $("links3").innerHTML = "<h3>Foundry portal</h3>" + (found.length
+      ? found.map((m) => `<a href="${m[2]}" target="_blank">${esc(m[1])} results →</a>`).join("")
+      : '<div class="muted">No portal link (local-only run, or check Foundry → Evaluations).</div>');
+  } finally { $("run3").disabled = false; }
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+[project]
+name = "foundry-account-risk-agent"
+version = "0.1.0"
+description = "Douro Cellars Account Risk Agent: live demos for 'Engineering AI Agents with Microsoft Foundry' (CollabDays Portugal 2026)"
+authors = [{ name = "Renato Romão" }]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "agent-framework-core>=1.22.0",
+    "agent-framework-devui>=1.0.0b261015",
+    "agent-framework-foundry>=1.15.0",
+    "agent-framework-openai>=1.17.0",
+    "azure-identity>=1.26.0",
+    "azure-monitor-opentelemetry>=1.8.11",
+    "fastapi>=0.141.1",
+    "mcp>=1.24,<2",
+    "opentelemetry-exporter-otlp-proto-http>=1.45.1",
+    "python-dotenv>=1.2.4",
+    "rich>=15.0.0",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+account-risk = "account_risk.app:main"
+
+[project.optional-dependencies]
+hosting = [
+    "agent-framework-foundry-hosting>=1.0.0b261015",
+]
+
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "account_risk"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "FILE-4001",
+    "customer_id": "C001",
+    "name": "Zava Lisboa – QBR Q4 2026 (draft).pptx",
+    "modified": "2026-10-16T18:30:00+01:00",
+    "modified_by": "ana.ribeiro@dourocellars.example",
+    "web_url": "https://dourocellars.sharepoint.example/sites/KeyAccounts/Zava/QBR-Q4-2026.pptx"
+  },
+  {
+    "id": "FILE-4002",
+    "customer_id": null,
+    "name": "Christmas allocation plan 2026.xlsx",
+    "modified": "2026-10-15T17:00:00+01:00",
+    "modified_by": "pedro.nunes@dourocellars.example",
+    "web_url": "https://dourocellars.sharepoint.example/sites/Ops/Christmas-allocation-2026.xlsx"
+  }
+]

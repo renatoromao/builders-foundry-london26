@@ -1,0 +1,972 @@
+[
+  {
+    "order_id": "ORD-50101",
+    "customer_id": "C001",
+    "order_date": "2026-07-02",
+    "sku": "SKU-VP17",
+    "cases": 410,
+    "value_eur": 123000,
+    "requested_delivery_date": "2026-07-07",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50102",
+    "customer_id": "C001",
+    "order_date": "2026-07-16",
+    "sku": "SKU-DRT21",
+    "cases": 410,
+    "value_eur": 36900,
+    "requested_delivery_date": "2026-07-21",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50103",
+    "customer_id": "C001",
+    "order_date": "2026-08-02",
+    "sku": "SKU-VP17",
+    "cases": 430,
+    "value_eur": 129000,
+    "requested_delivery_date": "2026-08-07",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50104",
+    "customer_id": "C001",
+    "order_date": "2026-08-16",
+    "sku": "SKU-DRT21",
+    "cases": 430,
+    "value_eur": 38700,
+    "requested_delivery_date": "2026-08-21",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50105",
+    "customer_id": "C001",
+    "order_date": "2026-09-02",
+    "sku": "SKU-VP17",
+    "cases": 450,
+    "value_eur": 135000,
+    "requested_delivery_date": "2026-09-07",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50106",
+    "customer_id": "C001",
+    "order_date": "2026-09-29",
+    "sku": "SKU-DRT21",
+    "cases": 450,
+    "value_eur": 40500,
+    "requested_delivery_date": "2026-10-12",
+    "status": "in_transit"
+  },
+  {
+    "order_id": "ORD-50107",
+    "customer_id": "C001",
+    "order_date": "2026-10-01",
+    "sku": "SKU-VP17",
+    "cases": 470,
+    "value_eur": 141000,
+    "requested_delivery_date": "2026-10-05",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50108",
+    "customer_id": "C001",
+    "order_date": "2026-10-06",
+    "sku": "SKU-VP17",
+    "cases": 470,
+    "value_eur": 141000,
+    "requested_delivery_date": "2026-10-16",
+    "status": "in_transit"
+  },
+  {
+    "order_id": "ORD-50109",
+    "customer_id": "C002",
+    "order_date": "2026-07-02",
+    "sku": "SKU-TW10",
+    "cases": 300,
+    "value_eur": 42000,
+    "requested_delivery_date": "2026-07-12",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50110",
+    "customer_id": "C002",
+    "order_date": "2026-07-16",
+    "sku": "SKU-RUBY",
+    "cases": 300,
+    "value_eur": 18000,
+    "requested_delivery_date": "2026-07-26",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50111",
+    "customer_id": "C002",
+    "order_date": "2026-08-02",
+    "sku": "SKU-TW10",
+    "cases": 325,
+    "value_eur": 45500,
+    "requested_delivery_date": "2026-08-12",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50112",
+    "customer_id": "C002",
+    "order_date": "2026-08-16",
+    "sku": "SKU-RUBY",
+    "cases": 325,
+    "value_eur": 19500,
+    "requested_delivery_date": "2026-08-26",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50113",
+    "customer_id": "C002",
+    "order_date": "2026-09-02",
+    "sku": "SKU-TW10",
+    "cases": 350,
+    "value_eur": 49000,
+    "requested_delivery_date": "2026-09-12",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50114",
+    "customer_id": "C002",
+    "order_date": "2026-09-16",
+    "sku": "SKU-RUBY",
+    "cases": 350,
+    "value_eur": 21000,
+    "requested_delivery_date": "2026-09-26",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50115",
+    "customer_id": "C002",
+    "order_date": "2026-10-02",
+    "sku": "SKU-RUBY",
+    "cases": 150,
+    "value_eur": 9000,
+    "requested_delivery_date": "2026-10-12",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50116",
+    "customer_id": "C002",
+    "order_date": "2026-10-14",
+    "sku": "SKU-TW10",
+    "cases": 1100,
+    "value_eur": 154000,
+    "requested_delivery_date": "2026-10-30",
+    "status": "open"
+  },
+  {
+    "order_id": "ORD-50117",
+    "customer_id": "C003",
+    "order_date": "2026-07-02",
+    "sku": "SKU-DRT21",
+    "cases": 600,
+    "value_eur": 54000,
+    "requested_delivery_date": "2026-07-10",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50118",
+    "customer_id": "C003",
+    "order_date": "2026-07-16",
+    "sku": "SKU-WHITE",
+    "cases": 600,
+    "value_eur": 33000,
+    "requested_delivery_date": "2026-07-24",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50119",
+    "customer_id": "C003",
+    "order_date": "2026-08-02",
+    "sku": "SKU-DRT21",
+    "cases": 475,
+    "value_eur": 42750,
+    "requested_delivery_date": "2026-08-10",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50120",
+    "customer_id": "C003",
+    "order_date": "2026-08-16",
+    "sku": "SKU-WHITE",
+    "cases": 475,
+    "value_eur": 26125,
+    "requested_delivery_date": "2026-08-24",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50121",
+    "customer_id": "C003",
+    "order_date": "2026-09-02",
+    "sku": "SKU-DRT21",
+    "cases": 320,
+    "value_eur": 28800,
+    "requested_delivery_date": "2026-09-10",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50122",
+    "customer_id": "C003",
+    "order_date": "2026-09-16",
+    "sku": "SKU-WHITE",
+    "cases": 320,
+    "value_eur": 17600,
+    "requested_delivery_date": "2026-09-24",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50123",
+    "customer_id": "C003",
+    "order_date": "2026-10-02",
+    "sku": "SKU-DRT21",
+    "cases": 90,
+    "value_eur": 8100,
+    "requested_delivery_date": "2026-10-10",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50124",
+    "customer_id": "C003",
+    "order_date": "2026-10-14",
+    "sku": "SKU-WHITE",
+    "cases": 90,
+    "value_eur": 4950,
+    "requested_delivery_date": "2026-10-22",
+    "status": "open"
+  },
+  {
+    "order_id": "ORD-50125",
+    "customer_id": "C004",
+    "order_date": "2026-07-02",
+    "sku": "SKU-RUBY",
+    "cases": 350,
+    "value_eur": 21000,
+    "requested_delivery_date": "2026-08-01",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50126",
+    "customer_id": "C004",
+    "order_date": "2026-07-16",
+    "sku": "SKU-DBR23",
+    "cases": 350,
+    "value_eur": 24500,
+    "requested_delivery_date": "2026-08-15",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50127",
+    "customer_id": "C004",
+    "order_date": "2026-08-02",
+    "sku": "SKU-RUBY",
+    "cases": 360,
+    "value_eur": 21600,
+    "requested_delivery_date": "2026-09-01",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50128",
+    "customer_id": "C004",
+    "order_date": "2026-08-16",
+    "sku": "SKU-DBR23",
+    "cases": 360,
+    "value_eur": 25200,
+    "requested_delivery_date": "2026-09-15",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50129",
+    "customer_id": "C004",
+    "order_date": "2026-09-02",
+    "sku": "SKU-RUBY",
+    "cases": 345,
+    "value_eur": 20700,
+    "requested_delivery_date": "2026-10-02",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50130",
+    "customer_id": "C004",
+    "order_date": "2026-09-16",
+    "sku": "SKU-DBR23",
+    "cases": 345,
+    "value_eur": 24150,
+    "requested_delivery_date": "2026-10-16",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50131",
+    "customer_id": "C004",
+    "order_date": "2026-10-02",
+    "sku": "SKU-RUBY",
+    "cases": 210,
+    "value_eur": 12600,
+    "requested_delivery_date": "2026-11-01",
+    "status": "open"
+  },
+  {
+    "order_id": "ORD-50132",
+    "customer_id": "C004",
+    "order_date": "2026-10-14",
+    "sku": "SKU-DBR23",
+    "cases": 210,
+    "value_eur": 14700,
+    "requested_delivery_date": "2026-11-13",
+    "status": "open"
+  },
+  {
+    "order_id": "ORD-50133",
+    "customer_id": "C005",
+    "order_date": "2026-07-02",
+    "sku": "SKU-TW20",
+    "cases": 550,
+    "value_eur": 143000,
+    "requested_delivery_date": "2026-07-27",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50134",
+    "customer_id": "C005",
+    "order_date": "2026-07-16",
+    "sku": "SKU-DBR23",
+    "cases": 550,
+    "value_eur": 38500,
+    "requested_delivery_date": "2026-08-10",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50135",
+    "customer_id": "C005",
+    "order_date": "2026-08-02",
+    "sku": "SKU-TW20",
+    "cases": 575,
+    "value_eur": 149500,
+    "requested_delivery_date": "2026-08-27",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50136",
+    "customer_id": "C005",
+    "order_date": "2026-08-16",
+    "sku": "SKU-DBR23",
+    "cases": 575,
+    "value_eur": 40250,
+    "requested_delivery_date": "2026-09-14",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50137",
+    "customer_id": "C005",
+    "order_date": "2026-09-02",
+    "sku": "SKU-TW20",
+    "cases": 560,
+    "value_eur": 145600,
+    "requested_delivery_date": "2026-09-27",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50138",
+    "customer_id": "C005",
+    "order_date": "2026-09-16",
+    "sku": "SKU-DBR23",
+    "cases": 560,
+    "value_eur": 39200,
+    "requested_delivery_date": "2026-10-11",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50139",
+    "customer_id": "C005",
+    "order_date": "2026-10-02",
+    "sku": "SKU-TW20",
+    "cases": 340,
+    "value_eur": 88400,
+    "requested_delivery_date": "2026-10-27",
+    "status": "open"
+  },
+  {
+    "order_id": "ORD-50140",
+    "customer_id": "C005",
+    "order_date": "2026-10-14",
+    "sku": "SKU-DBR23",
+    "cases": 340,
+    "value_eur": 23800,
+    "requested_delivery_date": "2026-11-08",
+    "status": "open"
+  },
+  {
+    "order_id": "ORD-50141",
+    "customer_id": "C006",
+    "order_date": "2026-07-02",
+    "sku": "SKU-WHITE",
+    "cases": 200,
+    "value_eur": 11000,
+    "requested_delivery_date": "2026-08-06",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50142",
+    "customer_id": "C006",
+    "order_date": "2026-07-16",
+    "sku": "SKU-RUBY",
+    "cases": 200,
+    "value_eur": 12000,
+    "requested_delivery_date": "2026-08-20",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50143",
+    "customer_id": "C006",
+    "order_date": "2026-08-02",
+    "sku": "SKU-WHITE",
+    "cases": 210,
+    "value_eur": 11550,
+    "requested_delivery_date": "2026-09-06",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50144",
+    "customer_id": "C006",
+    "order_date": "2026-08-16",
+    "sku": "SKU-RUBY",
+    "cases": 210,
+    "value_eur": 12600,
+    "requested_delivery_date": "2026-09-20",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50145",
+    "customer_id": "C006",
+    "order_date": "2026-09-02",
+    "sku": "SKU-WHITE",
+    "cases": 205,
+    "value_eur": 11275,
+    "requested_delivery_date": "2026-10-07",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50146",
+    "customer_id": "C006",
+    "order_date": "2026-09-16",
+    "sku": "SKU-RUBY",
+    "cases": 205,
+    "value_eur": 12300,
+    "requested_delivery_date": "2026-10-21",
+    "status": "open"
+  },
+  {
+    "order_id": "ORD-50147",
+    "customer_id": "C006",
+    "order_date": "2026-10-02",
+    "sku": "SKU-WHITE",
+    "cases": 125,
+    "value_eur": 6875,
+    "requested_delivery_date": "2026-11-06",
+    "status": "open"
+  },
+  {
+    "order_id": "ORD-50148",
+    "customer_id": "C006",
+    "order_date": "2026-10-14",
+    "sku": "SKU-RUBY",
+    "cases": 125,
+    "value_eur": 7500,
+    "requested_delivery_date": "2026-11-18",
+    "status": "open"
+  },
+  {
+    "order_id": "ORD-50149",
+    "customer_id": "C007",
+    "order_date": "2026-07-02",
+    "sku": "SKU-TW20",
+    "cases": 150,
+    "value_eur": 39000,
+    "requested_delivery_date": "2026-07-09",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50150",
+    "customer_id": "C007",
+    "order_date": "2026-07-16",
+    "sku": "SKU-VP17",
+    "cases": 150,
+    "value_eur": 45000,
+    "requested_delivery_date": "2026-07-23",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50151",
+    "customer_id": "C007",
+    "order_date": "2026-08-02",
+    "sku": "SKU-TW20",
+    "cases": 155,
+    "value_eur": 40300,
+    "requested_delivery_date": "2026-08-09",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50152",
+    "customer_id": "C007",
+    "order_date": "2026-08-16",
+    "sku": "SKU-VP17",
+    "cases": 155,
+    "value_eur": 46500,
+    "requested_delivery_date": "2026-08-23",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50153",
+    "customer_id": "C007",
+    "order_date": "2026-09-02",
+    "sku": "SKU-TW20",
+    "cases": 160,
+    "value_eur": 41600,
+    "requested_delivery_date": "2026-09-09",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50154",
+    "customer_id": "C007",
+    "order_date": "2026-09-16",
+    "sku": "SKU-VP17",
+    "cases": 160,
+    "value_eur": 48000,
+    "requested_delivery_date": "2026-09-23",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50155",
+    "customer_id": "C007",
+    "order_date": "2026-10-02",
+    "sku": "SKU-TW20",
+    "cases": 97,
+    "value_eur": 25220,
+    "requested_delivery_date": "2026-10-09",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50156",
+    "customer_id": "C007",
+    "order_date": "2026-10-14",
+    "sku": "SKU-VP17",
+    "cases": 98,
+    "value_eur": 29400,
+    "requested_delivery_date": "2026-10-21",
+    "status": "open"
+  },
+  {
+    "order_id": "ORD-50157",
+    "customer_id": "C008",
+    "order_date": "2026-07-02",
+    "sku": "SKU-DBR23",
+    "cases": 260,
+    "value_eur": 18200,
+    "requested_delivery_date": "2026-07-08",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50158",
+    "customer_id": "C008",
+    "order_date": "2026-07-16",
+    "sku": "SKU-RUBY",
+    "cases": 260,
+    "value_eur": 15600,
+    "requested_delivery_date": "2026-07-22",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50159",
+    "customer_id": "C008",
+    "order_date": "2026-08-02",
+    "sku": "SKU-DBR23",
+    "cases": 250,
+    "value_eur": 17500,
+    "requested_delivery_date": "2026-08-08",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50160",
+    "customer_id": "C008",
+    "order_date": "2026-08-16",
+    "sku": "SKU-RUBY",
+    "cases": 250,
+    "value_eur": 15000,
+    "requested_delivery_date": "2026-08-22",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50161",
+    "customer_id": "C008",
+    "order_date": "2026-09-02",
+    "sku": "SKU-DBR23",
+    "cases": 265,
+    "value_eur": 18550,
+    "requested_delivery_date": "2026-09-08",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50162",
+    "customer_id": "C008",
+    "order_date": "2026-09-16",
+    "sku": "SKU-RUBY",
+    "cases": 265,
+    "value_eur": 15900,
+    "requested_delivery_date": "2026-09-22",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50163",
+    "customer_id": "C008",
+    "order_date": "2026-10-02",
+    "sku": "SKU-DBR23",
+    "cases": 162,
+    "value_eur": 11340,
+    "requested_delivery_date": "2026-10-08",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50164",
+    "customer_id": "C008",
+    "order_date": "2026-10-14",
+    "sku": "SKU-RUBY",
+    "cases": 163,
+    "value_eur": 9780,
+    "requested_delivery_date": "2026-10-20",
+    "status": "open"
+  },
+  {
+    "order_id": "ORD-50165",
+    "customer_id": "C009",
+    "order_date": "2026-07-02",
+    "sku": "SKU-RUBY",
+    "cases": 130,
+    "value_eur": 7800,
+    "requested_delivery_date": "2026-07-11",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50166",
+    "customer_id": "C009",
+    "order_date": "2026-07-16",
+    "sku": "SKU-WHITE",
+    "cases": 130,
+    "value_eur": 7150,
+    "requested_delivery_date": "2026-07-25",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50167",
+    "customer_id": "C009",
+    "order_date": "2026-08-02",
+    "sku": "SKU-RUBY",
+    "cases": 135,
+    "value_eur": 8100,
+    "requested_delivery_date": "2026-08-11",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50168",
+    "customer_id": "C009",
+    "order_date": "2026-08-16",
+    "sku": "SKU-WHITE",
+    "cases": 135,
+    "value_eur": 7425,
+    "requested_delivery_date": "2026-08-25",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50169",
+    "customer_id": "C009",
+    "order_date": "2026-09-02",
+    "sku": "SKU-RUBY",
+    "cases": 127,
+    "value_eur": 7620,
+    "requested_delivery_date": "2026-09-11",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50170",
+    "customer_id": "C009",
+    "order_date": "2026-09-16",
+    "sku": "SKU-WHITE",
+    "cases": 128,
+    "value_eur": 7040,
+    "requested_delivery_date": "2026-09-25",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50171",
+    "customer_id": "C009",
+    "order_date": "2026-10-02",
+    "sku": "SKU-RUBY",
+    "cases": 77,
+    "value_eur": 4620,
+    "requested_delivery_date": "2026-10-11",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50172",
+    "customer_id": "C009",
+    "order_date": "2026-10-14",
+    "sku": "SKU-WHITE",
+    "cases": 78,
+    "value_eur": 4290,
+    "requested_delivery_date": "2026-10-23",
+    "status": "open"
+  },
+  {
+    "order_id": "ORD-50173",
+    "customer_id": "C010",
+    "order_date": "2026-07-02",
+    "sku": "SKU-TW20",
+    "cases": 170,
+    "value_eur": 44200,
+    "requested_delivery_date": "2026-08-11",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50174",
+    "customer_id": "C010",
+    "order_date": "2026-07-16",
+    "sku": "SKU-DRT21",
+    "cases": 170,
+    "value_eur": 15300,
+    "requested_delivery_date": "2026-08-25",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50175",
+    "customer_id": "C010",
+    "order_date": "2026-08-02",
+    "sku": "SKU-TW20",
+    "cases": 175,
+    "value_eur": 45500,
+    "requested_delivery_date": "2026-09-11",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50176",
+    "customer_id": "C010",
+    "order_date": "2026-08-16",
+    "sku": "SKU-DRT21",
+    "cases": 175,
+    "value_eur": 15750,
+    "requested_delivery_date": "2026-09-25",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50177",
+    "customer_id": "C010",
+    "order_date": "2026-09-02",
+    "sku": "SKU-TW20",
+    "cases": 180,
+    "value_eur": 46800,
+    "requested_delivery_date": "2026-10-12",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50178",
+    "customer_id": "C010",
+    "order_date": "2026-09-16",
+    "sku": "SKU-DRT21",
+    "cases": 180,
+    "value_eur": 16200,
+    "requested_delivery_date": "2026-10-26",
+    "status": "open"
+  },
+  {
+    "order_id": "ORD-50179",
+    "customer_id": "C010",
+    "order_date": "2026-10-02",
+    "sku": "SKU-TW20",
+    "cases": 110,
+    "value_eur": 28600,
+    "requested_delivery_date": "2026-11-11",
+    "status": "open"
+  },
+  {
+    "order_id": "ORD-50180",
+    "customer_id": "C010",
+    "order_date": "2026-10-14",
+    "sku": "SKU-DRT21",
+    "cases": 110,
+    "value_eur": 9900,
+    "requested_delivery_date": "2026-11-23",
+    "status": "open"
+  },
+  {
+    "order_id": "ORD-50181",
+    "customer_id": "C011",
+    "order_date": "2026-07-02",
+    "sku": "SKU-DRT21",
+    "cases": 45,
+    "value_eur": 4050,
+    "requested_delivery_date": "2026-07-07",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50182",
+    "customer_id": "C011",
+    "order_date": "2026-07-16",
+    "sku": "SKU-RUBY",
+    "cases": 45,
+    "value_eur": 2700,
+    "requested_delivery_date": "2026-07-21",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50183",
+    "customer_id": "C011",
+    "order_date": "2026-08-02",
+    "sku": "SKU-DRT21",
+    "cases": 42,
+    "value_eur": 3780,
+    "requested_delivery_date": "2026-08-07",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50184",
+    "customer_id": "C011",
+    "order_date": "2026-08-16",
+    "sku": "SKU-RUBY",
+    "cases": 43,
+    "value_eur": 2580,
+    "requested_delivery_date": "2026-08-21",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50185",
+    "customer_id": "C011",
+    "order_date": "2026-09-02",
+    "sku": "SKU-DRT21",
+    "cases": 47,
+    "value_eur": 4230,
+    "requested_delivery_date": "2026-09-07",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50186",
+    "customer_id": "C011",
+    "order_date": "2026-09-16",
+    "sku": "SKU-RUBY",
+    "cases": 48,
+    "value_eur": 2880,
+    "requested_delivery_date": "2026-09-21",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50187",
+    "customer_id": "C011",
+    "order_date": "2026-10-02",
+    "sku": "SKU-DRT21",
+    "cases": 29,
+    "value_eur": 2610,
+    "requested_delivery_date": "2026-10-09",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50188",
+    "customer_id": "C011",
+    "order_date": "2026-10-14",
+    "sku": "SKU-RUBY",
+    "cases": 29,
+    "value_eur": 1740,
+    "requested_delivery_date": "2026-10-19",
+    "status": "open"
+  },
+  {
+    "order_id": "ORD-50189",
+    "customer_id": "C012",
+    "order_date": "2026-07-02",
+    "sku": "SKU-RUBY",
+    "cases": 30,
+    "value_eur": 1800,
+    "requested_delivery_date": "2026-07-30",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50190",
+    "customer_id": "C012",
+    "order_date": "2026-07-16",
+    "sku": "SKU-WHITE",
+    "cases": 30,
+    "value_eur": 1650,
+    "requested_delivery_date": "2026-08-13",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50191",
+    "customer_id": "C012",
+    "order_date": "2026-08-02",
+    "sku": "SKU-RUBY",
+    "cases": 32,
+    "value_eur": 1920,
+    "requested_delivery_date": "2026-08-30",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50192",
+    "customer_id": "C012",
+    "order_date": "2026-08-16",
+    "sku": "SKU-WHITE",
+    "cases": 33,
+    "value_eur": 1815,
+    "requested_delivery_date": "2026-09-13",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50193",
+    "customer_id": "C012",
+    "order_date": "2026-09-02",
+    "sku": "SKU-RUBY",
+    "cases": 31,
+    "value_eur": 1860,
+    "requested_delivery_date": "2026-09-30",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50194",
+    "customer_id": "C012",
+    "order_date": "2026-09-16",
+    "sku": "SKU-WHITE",
+    "cases": 31,
+    "value_eur": 1705,
+    "requested_delivery_date": "2026-10-14",
+    "status": "delivered"
+  },
+  {
+    "order_id": "ORD-50195",
+    "customer_id": "C012",
+    "order_date": "2026-10-02",
+    "sku": "SKU-RUBY",
+    "cases": 19,
+    "value_eur": 1140,
+    "requested_delivery_date": "2026-10-30",
+    "status": "open"
+  },
+  {
+    "order_id": "ORD-50196",
+    "customer_id": "C012",
+    "order_date": "2026-10-14",
+    "sku": "SKU-WHITE",
+    "cases": 19,
+    "value_eur": 1045,
+    "requested_delivery_date": "2026-11-11",
+    "status": "open"
+  },
+  {
+    "order_id": "ORD-50197",
+    "customer_id": "C005",
+    "order_date": "2026-10-09",
+    "sku": "SKU-TW10",
+    "cases": 120,
+    "value_eur": 16800,
+    "requested_delivery_date": "2026-10-26",
+    "status": "open"
+  }
+]

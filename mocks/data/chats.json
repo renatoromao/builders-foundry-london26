@@ -1,0 +1,29 @@
+[
+  {
+    "id": "CHAT-3001",
+    "customer_id": "C001",
+    "chat": "Ana Ribeiro / Rui Costa",
+    "sent": "2026-10-17T16:05:00+01:00",
+    "from": "rui.costa@dourocellars.example",
+    "from_name": "Rui Costa",
+    "text": "Zava update: SHP-24131 ETA 21 Oct. SHP-24138 (Vintage Port) e-AD resubmitted, earliest 23 Oct. Option: express road freight for €1,350 gets SHP-24138 to Lisbon on 21 Oct if you approve today."
+  },
+  {
+    "id": "CHAT-3002",
+    "customer_id": "C002",
+    "chat": "Key Accounts – Ops (channel)",
+    "sent": "2026-10-15T17:10:00+01:00",
+    "from": "pedro.nunes@dourocellars.example",
+    "from_name": "Pedro Nunes",
+    "text": "10 Year Tawny: only ~400 cases free until the 16 Nov bottling run. Fabrikam's 1,100 cases for 30 Oct can't be fully covered – we could ship 400 now and the rest on 18 Nov, or offer 20 Year Tawny."
+  },
+  {
+    "id": "CHAT-3003",
+    "customer_id": "C003",
+    "chat": "Ana Ribeiro / Tiago Martins",
+    "sent": "2026-10-14T11:20:00+01:00",
+    "from": "tiago.martins@dourocellars.example",
+    "from_name": "Tiago Martins",
+    "text": "FYI Northwind is restructuring purchasing – I heard their new category manager is talking to other Port houses for 2027."
+  }
+]
