@@ -1,0 +1,149 @@
+[
+  {
+    "name": "Ana Ribeiro",
+    "email": "ana.ribeiro@dourocellars.example",
+    "job_title": "Key Account Manager",
+    "department": "Sales – Key Accounts",
+    "is_signed_in_user": true,
+    "accounts": [
+      "C001",
+      "C002",
+      "C003",
+      "C007"
+    ]
+  },
+  {
+    "name": "Tiago Martins",
+    "email": "tiago.martins@dourocellars.example",
+    "job_title": "Key Account Manager",
+    "department": "Sales – Key Accounts",
+    "accounts": [
+      "C005",
+      "C008",
+      "C011"
+    ]
+  },
+  {
+    "name": "Beatriz Lopes",
+    "email": "beatriz.lopes@dourocellars.example",
+    "job_title": "Key Account Manager",
+    "department": "Sales – Key Accounts",
+    "accounts": [
+      "C004",
+      "C006",
+      "C009",
+      "C010",
+      "C012"
+    ]
+  },
+  {
+    "name": "Rui Costa",
+    "email": "rui.costa@dourocellars.example",
+    "job_title": "Logistics Lead",
+    "department": "Operations",
+    "accounts": []
+  },
+  {
+    "name": "Pedro Nunes",
+    "email": "pedro.nunes@dourocellars.example",
+    "job_title": "Supply Planning Manager",
+    "department": "Operations",
+    "accounts": []
+  },
+  {
+    "name": "Sofia Almeida",
+    "email": "sofia.almeida@zava-lisboa.example",
+    "job_title": "Head of Purchasing",
+    "department": "Zava Lisboa",
+    "is_external": true,
+    "customer_id": "C001"
+  },
+  {
+    "name": "James Whitfield",
+    "email": "james.whitfield@fabrikamwines.example",
+    "job_title": "Category Buyer – Fortified Wines",
+    "department": "Fabrikam Wines London",
+    "is_external": true,
+    "customer_id": "C002"
+  },
+  {
+    "name": "Lukas Becker",
+    "email": "lukas.becker@northwind-hamburg.example",
+    "job_title": "Purchasing Director",
+    "department": "Northwind Traders Hamburg",
+    "is_external": true,
+    "customer_id": "C003"
+  },
+  {
+    "name": "Camila Rocha",
+    "email": "camila.rocha@contosobebidas.example",
+    "job_title": "Buyer",
+    "department": "Contoso Bebidas São Paulo",
+    "is_external": true,
+    "customer_id": "C004"
+  },
+  {
+    "name": "Emily Carter",
+    "email": "emily.carter@wideworldimporters.example",
+    "job_title": "Buyer",
+    "department": "Wide World Importers New York",
+    "is_external": true,
+    "customer_id": "C005"
+  },
+  {
+    "name": "Haruto Sato",
+    "email": "haruto.sato@adventureworks-tokyo.example",
+    "job_title": "Buyer",
+    "department": "Adventure Works Cellars Tokyo",
+    "is_external": true,
+    "customer_id": "C006"
+  },
+  {
+    "name": "Lena Meier",
+    "email": "lena.meier@alpinewinehouse.example",
+    "job_title": "Buyer",
+    "department": "Alpine Wine House Zurich",
+    "is_external": true,
+    "customer_id": "C007"
+  },
+  {
+    "name": "Claire Dubois",
+    "email": "claire.dubois@woodgrove-vins.example",
+    "job_title": "Buyer",
+    "department": "Woodgrove Vins Paris",
+    "is_external": true,
+    "customer_id": "C008"
+  },
+  {
+    "name": "Ingrid Hansen",
+    "email": "ingrid.hansen@lamnadrinks.example",
+    "job_title": "Buyer",
+    "department": "Lamna Drinks Oslo",
+    "is_external": true,
+    "customer_id": "C009"
+  },
+  {
+    "name": "Oliver Smith",
+    "email": "oliver.smith@relecloud-imports.example",
+    "job_title": "Buyer",
+    "department": "Relecloud Imports Sydney",
+    "is_external": true,
+    "customer_id": "C010"
+  },
+  {
+    "name": "Javier Morales",
+    "email": "compras@fourthcoffee-madrid.example",
+    "job_title": "Buyer",
+    "department": "Fourth Coffee & Wine Madrid",
+    "is_external": true,
+    "customer_id": "C011"
+  },
+  {
+    "name": "Noah Tremblay",
+    "email": "noah@tailspinbottles.example",
+    "job_title": "Buyer",
+    "department": "Tailspin Bottle Shop Toronto",
+    "is_external": true,
+    "customer_id": "C012"
+  }
+]

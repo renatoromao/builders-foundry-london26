@@ -1,0 +1,215 @@
+[
+  {
+    "id": "MSG-1001",
+    "conversation_id": "CONV-ZAVA-DELAYS",
+    "customer_id": "C001",
+    "received": "2026-10-16T17:42:00+01:00",
+    "from": "sofia.almeida@zava-lisboa.example",
+    "from_name": "Sofia Almeida",
+    "to": [
+      "ana.ribeiro@dourocellars.example"
+    ],
+    "cc": [
+      "rui.costa@dourocellars.example"
+    ],
+    "subject": "URGENT: third late delivery this month – Christmas range at risk",
+    "importance": "high",
+    "is_read": true,
+    "replied": false,
+    "body": "Ana,\n\nThis is the third delivery from Douro Cellars that arrives late this month (SHP-24117, SHP-24131 and now SHP-24138 with our Vintage Port 2017 for the Christmas range). Our Christmas range launches in 87 stores on 1 November and the Vintage Port shelf space is still empty.\n\nBefore our QBR on Tuesday I need a written recovery plan with confirmed delivery dates. If we cannot rely on your dates, we will have to review our supplier allocation for 2027.\n\nRegards,\nSofia Almeida\nHead of Purchasing, Zava Lisboa"
+  },
+  {
+    "id": "MSG-0996",
+    "conversation_id": "CONV-ZAVA-DELAYS",
+    "customer_id": "C001",
+    "received": "2026-10-10T09:15:00+01:00",
+    "from": "sofia.almeida@zava-lisboa.example",
+    "from_name": "Sofia Almeida",
+    "to": [
+      "ana.ribeiro@dourocellars.example"
+    ],
+    "cc": [],
+    "subject": "Delivery SHP-24117 arrived 5 days late",
+    "importance": "normal",
+    "is_read": true,
+    "replied": true,
+    "body": "Hi Ana, the delivery for SHP-24117 only arrived today, 5 days after the promised date. Please make sure the next ones arrive on time. Sofia"
+  },
+  {
+    "id": "MSG-0997",
+    "conversation_id": "CONV-ZAVA-DELAYS",
+    "customer_id": "C001",
+    "received": "2026-10-10T11:02:00+01:00",
+    "from": "ana.ribeiro@dourocellars.example",
+    "from_name": "Ana Ribeiro",
+    "to": [
+      "sofia.almeida@zava-lisboa.example"
+    ],
+    "cc": [],
+    "subject": "RE: Delivery SHP-24117 arrived 5 days late",
+    "importance": "normal",
+    "is_read": true,
+    "replied": false,
+    "body": "Hi Sofia, I'm sorry about the delay – we had a picking backlog at our Gaia warehouse. It's resolved and your next deliveries are on track. Ana"
+  },
+  {
+    "id": "MSG-1002",
+    "conversation_id": "CONV-FAB-XMAS",
+    "customer_id": "C002",
+    "received": "2026-10-14T10:20:00+01:00",
+    "from": "james.whitfield@fabrikamwines.example",
+    "from_name": "James Whitfield",
+    "to": [
+      "ana.ribeiro@dourocellars.example"
+    ],
+    "cc": [],
+    "subject": "Christmas campaign – confirming 1,100 cases of 10 Year Tawny for 30 Oct",
+    "importance": "normal",
+    "is_read": true,
+    "replied": true,
+    "body": "Hi Ana, confirming our Christmas order: 1,100 cases of 10 Year Old Tawny for delivery on 30 October. Our in-store tasting campaign starts on 9 November across 140 shops – the team is excited! James"
+  },
+  {
+    "id": "MSG-1003",
+    "conversation_id": "CONV-FAB-XMAS",
+    "customer_id": "C002",
+    "received": "2026-10-14T12:05:00+01:00",
+    "from": "ana.ribeiro@dourocellars.example",
+    "from_name": "Ana Ribeiro",
+    "to": [
+      "james.whitfield@fabrikamwines.example"
+    ],
+    "cc": [],
+    "subject": "RE: Christmas campaign – confirming 1,100 cases of 10 Year Tawny for 30 Oct",
+    "importance": "normal",
+    "is_read": true,
+    "replied": false,
+    "body": "Thanks James, order received. Looking forward to the campaign! Ana"
+  },
+  {
+    "id": "MSG-1004",
+    "conversation_id": "CONV-NW-TASTING",
+    "customer_id": "C003",
+    "received": "2026-10-13T08:30:00+01:00",
+    "from": "lukas.becker@northwind-hamburg.example",
+    "from_name": "Lukas Becker",
+    "to": [
+      "ana.ribeiro@dourocellars.example"
+    ],
+    "cc": [],
+    "subject": "Canceled: Northwind – Annual tasting & 2027 planning",
+    "importance": "normal",
+    "is_read": true,
+    "replied": false,
+    "body": "Hi Ana, I have to cancel our tasting and 2027 planning on 15 October because of an internal restructuring of our purchasing team. I will come back to you. Lukas"
+  },
+  {
+    "id": "MSG-0950",
+    "conversation_id": "CONV-NW-Q3",
+    "customer_id": "C003",
+    "received": "2026-08-28T15:10:00+01:00",
+    "from": "lukas.becker@northwind-hamburg.example",
+    "from_name": "Lukas Becker",
+    "to": [
+      "ana.ribeiro@dourocellars.example"
+    ],
+    "cc": [],
+    "subject": "September order",
+    "importance": "normal",
+    "is_read": true,
+    "replied": true,
+    "body": "Hi Ana, please find our September order attached. We are reducing volumes a bit while we review our range for 2027. Best, Lukas"
+  },
+  {
+    "id": "MSG-1005",
+    "conversation_id": "CONV-PLAN-TW10",
+    "customer_id": null,
+    "received": "2026-10-15T16:45:00+01:00",
+    "from": "pedro.nunes@dourocellars.example",
+    "from_name": "Pedro Nunes",
+    "to": [
+      "ana.ribeiro@dourocellars.example",
+      "tiago.martins@dourocellars.example"
+    ],
+    "cc": [],
+    "subject": "Heads-up: 10 Year Tawny bottling run moved to 16 Nov",
+    "importance": "normal",
+    "is_read": false,
+    "replied": false,
+    "body": "Hi both, the next 10 Year Old Tawny bottling run moved to 16 November (glass supplier delay). Free stock is tight until then – please check big open orders. Pedro"
+  },
+  {
+    "id": "MSG-1006",
+    "conversation_id": "CONV-FC-LATE",
+    "customer_id": "C011",
+    "received": "2026-10-15T09:00:00+01:00",
+    "from": "compras@fourthcoffee-madrid.example",
+    "from_name": "Javier Morales",
+    "to": [
+      "tiago.martins@dourocellars.example"
+    ],
+    "cc": [
+      "ana.ribeiro@dourocellars.example"
+    ],
+    "subject": "Pedido entregado con retraso / late delivery",
+    "importance": "normal",
+    "is_read": true,
+    "replied": false,
+    "body": "Hola, our last order arrived 4 days late. Please confirm the next delivery date. Javier"
+  },
+  {
+    "id": "MSG-0980",
+    "conversation_id": "CONV-WWI-FIX",
+    "customer_id": "C005",
+    "received": "2026-09-16T14:00:00+01:00",
+    "from": "emily.carter@wideworldimporters.example",
+    "from_name": "Emily Carter",
+    "to": [
+      "tiago.martins@dourocellars.example"
+    ],
+    "cc": [
+      "ana.ribeiro@dourocellars.example"
+    ],
+    "subject": "Thanks for the quick fix",
+    "importance": "normal",
+    "is_read": true,
+    "replied": true,
+    "body": "Hi Tiago, the delivery came one day late because of customs, but your team handled it well. All good on our side. Emily"
+  },
+  {
+    "id": "MSG-1007",
+    "conversation_id": "CONV-ALP-NOV",
+    "customer_id": "C007",
+    "received": "2026-10-12T10:00:00+01:00",
+    "from": "lena.meier@alpinewinehouse.example",
+    "from_name": "Lena Meier",
+    "to": [
+      "ana.ribeiro@dourocellars.example"
+    ],
+    "cc": [],
+    "subject": "November order and QBR date",
+    "importance": "normal",
+    "is_read": true,
+    "replied": true,
+    "body": "Hi Ana, November order as usual – and 4 November works for our QBR. Lena"
+  },
+  {
+    "id": "MSG-1008",
+    "conversation_id": "CONV-CTS-QBR",
+    "customer_id": "C004",
+    "received": "2026-10-09T13:30:00+01:00",
+    "from": "camila.rocha@contosobebidas.example",
+    "from_name": "Camila Rocha",
+    "to": [
+      "beatriz.lopes@dourocellars.example"
+    ],
+    "cc": [
+      "ana.ribeiro@dourocellars.example"
+    ],
+    "subject": "Q4 forecast",
+    "importance": "normal",
+    "is_read": true,
+    "replied": true,
+    "body": "Hi Beatriz, our Q4 forecast is in line with last year. See you at the QBR on 29 Oct. Camila"
+  }
+]

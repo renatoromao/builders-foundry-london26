@@ -1,0 +1,93 @@
+[
+  {
+    "sku": "SKU-VP17",
+    "product_name": "Vintage Port 2017",
+    "warehouse": "Vila Nova de Gaia",
+    "on_hand_cases": 2400,
+    "open_order_demand_cases": 98,
+    "projected_balance_cases": 2302,
+    "reorder_point_cases": 600,
+    "weekly_demand_cases": 160,
+    "next_replenishment_date": "2027-01-15",
+    "next_replenishment_cases": 1200,
+    "unit_price_eur_per_case": 300
+  },
+  {
+    "sku": "SKU-TW10",
+    "product_name": "10 Year Old Tawny Port",
+    "warehouse": "Vila Nova de Gaia",
+    "on_hand_cases": 520,
+    "open_order_demand_cases": 1220,
+    "projected_balance_cases": -700,
+    "reorder_point_cases": 900,
+    "weekly_demand_cases": 260,
+    "next_replenishment_date": "2026-11-16",
+    "next_replenishment_cases": 1500,
+    "unit_price_eur_per_case": 140
+  },
+  {
+    "sku": "SKU-TW20",
+    "product_name": "20 Year Old Tawny Port",
+    "warehouse": "Vila Nova de Gaia",
+    "on_hand_cases": 1600,
+    "open_order_demand_cases": 450,
+    "projected_balance_cases": 1150,
+    "reorder_point_cases": 400,
+    "weekly_demand_cases": 90,
+    "next_replenishment_date": "2026-12-01",
+    "next_replenishment_cases": 600,
+    "unit_price_eur_per_case": 260
+  },
+  {
+    "sku": "SKU-DRT21",
+    "product_name": "Douro Reserva Tinto 2021",
+    "warehouse": "Vila Nova de Gaia",
+    "on_hand_cases": 4800,
+    "open_order_demand_cases": 290,
+    "projected_balance_cases": 4510,
+    "reorder_point_cases": 1200,
+    "weekly_demand_cases": 420,
+    "next_replenishment_date": "2026-11-02",
+    "next_replenishment_cases": 3000,
+    "unit_price_eur_per_case": 90
+  },
+  {
+    "sku": "SKU-RUBY",
+    "product_name": "Fine Ruby Port",
+    "warehouse": "Vila Nova de Gaia",
+    "on_hand_cases": 5200,
+    "open_order_demand_cases": 751,
+    "projected_balance_cases": 4449,
+    "reorder_point_cases": 1500,
+    "weekly_demand_cases": 520,
+    "next_replenishment_date": "2026-10-28",
+    "next_replenishment_cases": 4000,
+    "unit_price_eur_per_case": 60
+  },
+  {
+    "sku": "SKU-WHITE",
+    "product_name": "Extra Dry White Port",
+    "warehouse": "Vila Nova de Gaia",
+    "on_hand_cases": 2100,
+    "open_order_demand_cases": 312,
+    "projected_balance_cases": 1788,
+    "reorder_point_cases": 500,
+    "weekly_demand_cases": 140,
+    "next_replenishment_date": "2026-11-09",
+    "next_replenishment_cases": 1000,
+    "unit_price_eur_per_case": 55
+  },
+  {
+    "sku": "SKU-DBR23",
+    "product_name": "Douro Branco Reserva 2023",
+    "warehouse": "Vila Nova de Gaia",
+    "on_hand_cases": 1900,
+    "open_order_demand_cases": 550,
+    "projected_balance_cases": 1350,
+    "reorder_point_cases": 500,
+    "weekly_demand_cases": 150,
+    "next_replenishment_date": "2026-11-23",
+    "next_replenishment_cases": 1200,
+    "unit_price_eur_per_case": 70
+  }
+]

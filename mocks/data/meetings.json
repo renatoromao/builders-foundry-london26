@@ -1,0 +1,97 @@
+[
+  {
+    "id": "EVT-2001",
+    "customer_id": "C001",
+    "title": "Zava Lisboa – Q4 Quarterly Business Review",
+    "start": "2026-10-20T10:00:00+01:00",
+    "end": "2026-10-20T11:00:00+01:00",
+    "organizer": "ana.ribeiro@dourocellars.example",
+    "attendees": [
+      "ana.ribeiro@dourocellars.example",
+      "sofia.almeida@zava-lisboa.example",
+      "rui.costa@dourocellars.example"
+    ],
+    "location": "Zava Lisboa HQ, Lisbon / Microsoft Teams",
+    "status": "scheduled",
+    "agenda": "Q3 performance, Christmas range readiness, 2027 supplier allocation"
+  },
+  {
+    "id": "EVT-2002",
+    "customer_id": "C003",
+    "title": "Northwind – Annual tasting & 2027 planning",
+    "start": "2026-10-15T14:00:00+02:00",
+    "end": "2026-10-15T16:00:00+02:00",
+    "organizer": "ana.ribeiro@dourocellars.example",
+    "attendees": [
+      "ana.ribeiro@dourocellars.example",
+      "lukas.becker@northwind-hamburg.example"
+    ],
+    "location": "Northwind Traders, Hamburg",
+    "status": "cancelled",
+    "cancelled_by": "lukas.becker@northwind-hamburg.example",
+    "cancelled_on": "2026-10-13",
+    "cancellation_note": "Internal restructuring of the purchasing team",
+    "rescheduled": false
+  },
+  {
+    "id": "EVT-2003",
+    "customer_id": "C002",
+    "title": "Fabrikam – Christmas campaign sync",
+    "start": "2026-10-27T15:00:00+00:00",
+    "end": "2026-10-27T15:30:00+00:00",
+    "organizer": "ana.ribeiro@dourocellars.example",
+    "attendees": [
+      "ana.ribeiro@dourocellars.example",
+      "james.whitfield@fabrikamwines.example"
+    ],
+    "location": "Microsoft Teams",
+    "status": "scheduled",
+    "agenda": "Delivery of the 1,100-case 10 Year Tawny order, tasting campaign"
+  },
+  {
+    "id": "EVT-2004",
+    "customer_id": "C005",
+    "title": "Wide World Importers – monthly check-in",
+    "start": "2026-10-22T15:00:00+01:00",
+    "end": "2026-10-22T15:30:00+01:00",
+    "organizer": "tiago.martins@dourocellars.example",
+    "attendees": [
+      "tiago.martins@dourocellars.example",
+      "emily.carter@wideworldimporters.example",
+      "ana.ribeiro@dourocellars.example"
+    ],
+    "location": "Microsoft Teams",
+    "status": "scheduled",
+    "agenda": "Holiday season volumes"
+  },
+  {
+    "id": "EVT-2005",
+    "customer_id": "C004",
+    "title": "Contoso Bebidas – Q4 QBR",
+    "start": "2026-10-29T14:00:00+01:00",
+    "end": "2026-10-29T15:00:00+01:00",
+    "organizer": "beatriz.lopes@dourocellars.example",
+    "attendees": [
+      "beatriz.lopes@dourocellars.example",
+      "camila.rocha@contosobebidas.example"
+    ],
+    "location": "Microsoft Teams",
+    "status": "scheduled",
+    "agenda": "Q4 forecast, 2027 range"
+  },
+  {
+    "id": "EVT-2006",
+    "customer_id": "C007",
+    "title": "Alpine Wine House – Q4 QBR",
+    "start": "2026-11-04T10:00:00+01:00",
+    "end": "2026-11-04T11:00:00+01:00",
+    "organizer": "ana.ribeiro@dourocellars.example",
+    "attendees": [
+      "ana.ribeiro@dourocellars.example",
+      "lena.meier@alpinewinehouse.example"
+    ],
+    "location": "Zurich",
+    "status": "scheduled",
+    "agenda": "Q3 review, Christmas sell-out"
+  }
+]

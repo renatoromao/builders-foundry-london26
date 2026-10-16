@@ -1,0 +1,13 @@
+customer_id,name,country,city,segment,account_owner,buyer_name,buyer_email,top_sku,annual_revenue_eur,standard_lead_time_days
+C001,Zava Lisboa,Portugal,Lisbon,Key account,Ana Ribeiro,Sofia Almeida,sofia.almeida@zava-lisboa.example,SKU-VP17,1850000,5
+C002,Fabrikam Wines London,United Kingdom,London,Key account,Ana Ribeiro,James Whitfield,james.whitfield@fabrikamwines.example,SKU-TW10,2300000,10
+C003,Northwind Traders Hamburg,Germany,Hamburg,Key account,Ana Ribeiro,Lukas Becker,lukas.becker@northwind-hamburg.example,SKU-DRT21,1400000,8
+C004,Contoso Bebidas São Paulo,Brazil,São Paulo,Key account,Beatriz Lopes,Camila Rocha,camila.rocha@contosobebidas.example,SKU-RUBY,1650000,30
+C005,Wide World Importers New York,United States,New York,Key account,Tiago Martins,Emily Carter,emily.carter@wideworldimporters.example,SKU-TW20,2900000,25
+C006,Adventure Works Cellars Tokyo,Japan,Tokyo,Key account,Beatriz Lopes,Haruto Sato,haruto.sato@adventureworks-tokyo.example,SKU-WHITE,1100000,35
+C007,Alpine Wine House Zurich,Switzerland,Zurich,Key account,Ana Ribeiro,Lena Meier,lena.meier@alpinewinehouse.example,SKU-TW20,980000,7
+C008,Woodgrove Vins Paris,France,Paris,Key account,Tiago Martins,Claire Dubois,claire.dubois@woodgrove-vins.example,SKU-DBR23,1250000,6
+C009,Lamna Drinks Oslo,Norway,Oslo,Key account,Beatriz Lopes,Ingrid Hansen,ingrid.hansen@lamnadrinks.example,SKU-RUBY,760000,9
+C010,Relecloud Imports Sydney,Australia,Sydney,Key account,Beatriz Lopes,Oliver Smith,oliver.smith@relecloud-imports.example,SKU-TW20,890000,40
+C011,Fourth Coffee & Wine Madrid,Spain,Madrid,Standard,Tiago Martins,Javier Morales,compras@fourthcoffee-madrid.example,SKU-DRT21,210000,5
+C012,Tailspin Bottle Shop Toronto,Canada,Toronto,Standard,Beatriz Lopes,Noah Tremblay,noah@tailspinbottles.example,SKU-RUBY,150000,28

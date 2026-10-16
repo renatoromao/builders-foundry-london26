@@ -1,0 +1,16 @@
+# secrets and local state
+.env
+.demo_state/
+logs/
+evals/results/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+hosting/build/
+.azure/
+
+# local tooling and build output
+.claude/settings.local.json
+hosting/*.zip
